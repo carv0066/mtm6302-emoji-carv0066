@@ -7,10 +7,10 @@ const emojiArray = ['\u{1F60A}', '\u{1F355}', '\u{26BD}', '\u{1F388}', '\u{1F3B6
 //#2
 const emojiSection = document.getElementById('emoji');
 
-const items = [];
+const emojiList = [];
 
 for (const emoji of emojiArray) {
-    items.push(`
+    emojiList.push(`
     <div class="each-emoji">
         <div  class="emoji-style">${emoji}</div>
         <code class="code">${emoji.codePointAt(0).toString(16)}</code>
@@ -20,7 +20,7 @@ for (const emoji of emojiArray) {
 
 //#3
 
-emojiSection.innerHTML = emojiSection.innerHTML + items.join('');
+emojiSection.innerHTML = emojiSection.innerHTML + emojiList.join('');
 
 
 
